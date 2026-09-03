@@ -13,7 +13,9 @@
 <meta property="og:site_name" content="비욘드 잉글리쉬 사송캠퍼스">
 <meta property="og:title" content="비욘드 잉글리쉬 사송캠퍼스">
 <meta property="og:description" content="결과가 다른 영어 · Phonics부터 수능까지 이어지는 영어 성장 로드맵">
-<meta property="og:image" content="https://beyondtopenglab.github.io/assets/og.png">
+<!-- ↓ 배포가 끝나면 실제 주소로 바꿔야 합니다. 카카오톡은 상대 경로를 읽지
+     못하고 전체 주소를 요구합니다. 예: https://beyond-sasong.pages.dev/assets/og.png -->
+<meta property="og:image" content="https://REPLACE-ME/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
@@ -33,11 +35,16 @@
      --------------------------------------------------------------------- */
   :root {
     --brand:        #DB0106;
-    --brand-press:  #AE0105;
     --brand-deep:   #7C0510;
     --brand-ink:    #C00105;
     --brand-tint:   #FCE9E9;
     --brand-line:   #F2CFD0;
+
+    /* 주 버튼은 «브랜드 면» 이라 테마를 타지 않는다.
+       어두운 테마에서 빨강을 밝히면 흰 글자와의 대비가 3.2:1 로 떨어진다. */
+    --cta-bg:       #DB0106;
+    --cta-bg-press: #AE0105;
+    --cta-fg:       #FFF7F7;
 
     --ground:       #FBF7F6;
     --surface:      #FFFFFF;
@@ -55,8 +62,8 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
+      /* 밝힌 빨강은 «바탕 위의 글자·아이콘» 에만 쓴다. 버튼 면에는 쓰지 않는다. */
       --brand:        #FF4B50;
-      --brand-press:  #E23A3F;
       --brand-deep:   #5C060C;
       --brand-ink:    #FF7A7E;
       --brand-tint:   #2D1516;
@@ -222,8 +229,8 @@
   .cta strong { flex: 1; font-weight: inherit; }
   .cta:active { transform: translateY(1px); }
 
-  .cta-primary { background: var(--brand); color: #FFF7F7; box-shadow: var(--shadow); }
-  .cta-primary:hover { background: var(--brand-press); }
+  .cta-primary { background: var(--cta-bg); color: var(--cta-fg); box-shadow: var(--shadow); }
+  .cta-primary:hover { background: var(--cta-bg-press); }
 
   .cta-secondary {
     background: var(--brand-tint); color: var(--brand-ink);

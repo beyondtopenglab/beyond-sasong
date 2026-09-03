@@ -82,6 +82,20 @@ GitHub 웹 화면에서 바로 고칠 수 있습니다.
 
 `https://<프로젝트이름>.pages.dev` 주소가 나옵니다.
 
+### 배포 직후 한 번 — 미리보기 주소 채우기
+
+`index.html` 위쪽에 `https://REPLACE-ME/assets/og.png` 로 비워 둔 곳이 있습니다.
+방금 받은 실제 주소로 바꿔야 카카오톡에 링크를 붙였을 때 미리보기 카드가 뜹니다.
+**카카오톡은 상대 경로를 읽지 못하고 전체 주소를 요구합니다.**
+
+```
+<meta property="og:image" content="https://beyond-sasong.pages.dev/assets/og.png">
+```
+
+바꾼 뒤 카카오톡에서 이미 한 번 링크를 보냈다면
+[카카오 디버거](https://developers.kakao.com/tool/clear/og)에서 캐시를 지워야
+새 이미지가 보입니다.
+
 ### 그다음부터
 
 `main` 에 push 하면 자동으로 다시 배포됩니다. 따로 할 일이 없습니다.
