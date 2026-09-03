@@ -6,15 +6,15 @@
 
 <title>비욘드 잉글리쉬 사송캠퍼스 | 결과가 다른 영어</title>
 <meta name="description" content="경남 양산 사송신도시 영어학원. Phonics부터 수능까지 이어지는 영어 성장 로드맵. 신입생 상담 신청과 학원 안내.">
-<meta name="theme-color" content="#DB0106">
+<meta name="theme-color" content="#FDF2F3">
 
-<!-- 카카오톡·인스타그램에 링크를 붙였을 때 보이는 미리보기 카드 -->
+<!-- 카카오톡·인스타그램에 링크를 붙였을 때 보이는 미리보기 카드.
+     카카오톡은 상대 경로를 읽지 못하고 전체 주소를 요구한다.
+     주소가 바뀌면(도메인을 붙이면) 이 두 줄도 함께 고쳐야 한다. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="비욘드 잉글리쉬 사송캠퍼스">
 <meta property="og:title" content="비욘드 잉글리쉬 사송캠퍼스">
 <meta property="og:description" content="결과가 다른 영어 · Phonics부터 수능까지 이어지는 영어 성장 로드맵">
-<!-- 카카오톡은 상대 경로를 읽지 못하고 전체 주소를 요구한다.
-     나중에 도메인을 붙이면 이 두 줄도 함께 바꿔야 미리보기가 유지된다. -->
 <meta property="og:url" content="https://beyond-sasong.pages.dev/">
 <meta property="og:image" content="https://beyond-sasong.pages.dev/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -27,270 +27,219 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
 
 <style>
   /* ---------------------------------------------------------------------
-     색 — 브랜드 레드는 로고 파일에서 그대로 뽑은 값이다 (#DB0106).
-     중성색은 순회색이 아니라 이 빨강 쪽으로 살짝 기울여 골랐다.
+     연분홍 바탕 위에 흰 카드 하나. 빨강은 로고 파일에서 뽑은 값(#DB0106)이고,
+     중성색은 순회색이 아니라 그 빨강 쪽으로 살짝 기울여 골랐다.
+
+     세로를 아낀다 — 휴대폰 한 화면에 전부 들어와야 하므로 머리를 키우지 않고
+     버튼 사이 간격도 좁게 잡았다.
      --------------------------------------------------------------------- */
   :root {
-    --brand:        #DB0106;
-    --brand-deep:   #7C0510;
-    --brand-ink:    #C00105;
-    --brand-tint:   #FCE9E9;
-    --brand-line:   #F2CFD0;
+    --brand:      #DB0106;
+    --brand-ink:  #C00105;   /* 밝은 면 위의 글자·아이콘용 */
+    --tint:       #FCE7E8;
+    --tint-line:  #F6D5D7;
 
-    /* 주 버튼은 «브랜드 면» 이라 테마를 타지 않는다.
-       어두운 테마에서 빨강을 밝히면 흰 글자와의 대비가 3.2:1 로 떨어진다. */
+    --ground:     #FDF2F3;   /* 카드 뒤 연분홍 */
+    --card:       #FFFFFF;
+    --line:       #F1E3E3;
+    --ink:        #1A1213;
+    --ink-2:      #4C3B3C;
+    --muted:      #8A7476;
+
+    /* 주 버튼은 «브랜드 면» 이라 테마를 타지 않는다. 어두운 테마에서 빨강을
+       밝히면 흰 글자와의 대비가 3.2:1 로 떨어진다. */
     --cta-bg:       #DB0106;
     --cta-bg-press: #AE0105;
     --cta-fg:       #FFF7F7;
 
-    --ground:       #FBF7F6;
-    --surface:      #FFFFFF;
-    --line:         #ECE3E2;
-    --ink:          #1A1213;
-    --ink-2:        #4A3A3B;
-    --muted:        #7D6A6B;
-
-    --on-brand:     #FFF7F7;
-    --on-brand-dim: #F4BFC0;
-
-    --radius: 14px;
-    --shadow: 0 1px 2px rgba(26,18,19,.05), 0 10px 28px -14px rgba(219,1,6,.28);
+    --shadow-card: 0 1px 2px rgba(26,18,19,.04), 0 18px 40px -24px rgba(219,1,6,.22);
+    --shadow-row:  0 1px 2px rgba(26,18,19,.05);
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      /* 밝힌 빨강은 «바탕 위의 글자·아이콘» 에만 쓴다. 버튼 면에는 쓰지 않는다. */
-      --brand:        #FF4B50;
-      --brand-deep:   #5C060C;
-      --brand-ink:    #FF7A7E;
-      --brand-tint:   #2D1516;
-      --brand-line:   #4B2022;
-
-      --ground:       #141011;
-      --surface:      #1E1718;
-      --line:         #2E2425;
-      --ink:          #F6EEEE;
-      --ink-2:        #D6C4C4;
-      --muted:        #9C8687;
-
-      --on-brand:     #FFF4F4;
-      --on-brand-dim: #E4A5A6;
-
-      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.8);
-    }
-  }
+  /* 밝은 테마 하나로 고정한다. 보는 사람 휴대폰이 어두운 모드여도 이 모습
+     그대로 나온다 — 색이 전부 위에 적혀 있고 body 가 배경을 직접 칠하므로
+     바깥 테마를 따라가지 않는다. */
 
   * { box-sizing: border-box; }
-
   html { -webkit-text-size-adjust: 100%; }
 
   body {
     margin: 0;
+    min-height: 100dvh;
     background: var(--ground);
     color: var(--ink);
     font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    /* flex-start 가 없으면 카드가 세로로 늘어나 화면을 꽉 채운다 */
+    align-items: flex-start;
+    padding: clamp(10px, 2.5vh, 22px) 12px;
   }
 
-  .page {
-    max-width: 452px;
-    margin-inline: auto;
-    padding-bottom: max(56px, env(safe-area-inset-bottom));
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-radius: 26px;
+    box-shadow: var(--shadow-card);
+    /* 화면이 낮을수록 알아서 조여진다 — 휴대폰 한 화면에 다 들어와야 하므로 */
+    padding: clamp(18px, 3vh, 26px) 18px calc(clamp(16px, 2.4vh, 22px) + env(safe-area-inset-bottom));
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: clamp(13px, 2.2vh, 20px);
   }
 
   /* --------------------------------------------------------------- 머리 */
   .mast {
-    background:
-      radial-gradient(120% 90% at 50% -18%, rgba(255,90,95,.55) 0%, transparent 60%),
-      linear-gradient(168deg, var(--brand) 0%, var(--brand-deep) 100%);
-    color: var(--on-brand);
-    padding: calc(46px + env(safe-area-inset-top)) 28px 34px;
-    border-radius: 0 0 26px 26px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
+    gap: 5px;
   }
 
+  /* 로고 파일 자체가 빨간 면이라 원형으로 자르면 그대로 빨간 원이 된다 */
   .mark {
-    width: 62px;
-    height: 62px;
-    border-radius: 17px;
+    width: clamp(56px, 8vh, 72px);
+    height: clamp(56px, 8vh, 72px);
+    border-radius: 50%;
     display: block;
-    background: var(--on-brand);
-    padding: 4px;
-    box-shadow: 0 6px 20px -8px rgba(0,0,0,.45);
+    margin-bottom: clamp(4px, .8vh, 9px);
+    box-shadow: 0 6px 18px -6px rgba(219,1,6,.5);
   }
 
-  .wordmark { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-
-  .wordmark b {
-    font-family: Fraunces, "Gowun Batang", Georgia, serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-size: clamp(36px, 11.5vw, 44px);
-    line-height: .96;
-    letter-spacing: -.018em;
-  }
-
-  .wordmark i {
-    font-style: normal;
-    font-size: 10.5px;
-    font-weight: 500;
-    letter-spacing: .42em;
-    text-indent: .42em;
-    color: var(--on-brand-dim);
-  }
-
-  .campus {
-    margin-top: 6px;
+  h1 {
+    margin: 0;
     font-family: "Gowun Batang", serif;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 700;
-    letter-spacing: -.01em;
+    letter-spacing: -.02em;
+    text-wrap: balance;
   }
-
-  .tagline { display: flex; flex-direction: column; gap: 6px; }
-  .tagline p { margin: 0; text-wrap: balance; }
 
   .claim {
-    font-family: "Gowun Batang", serif;
-    font-size: 17px;
-    font-weight: 700;
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--brand-ink);
     letter-spacing: -.01em;
   }
-  .claim em { font-family: Fraunces, serif; font-weight: 500; font-style: italic; }
-
-  .sub { font-size: 13px; font-weight: 300; color: var(--on-brand-dim); }
-
-  /* 로드맵 레일 — «Phonics부터 수능까지» 를 그림으로 옮긴 것.
-     페이지에서 유일하게 움직이는 부분이다. */
-  .rail { width: 100%; display: flex; flex-direction: column; gap: 10px; padding-top: 2px; }
-
-  .rail-label {
-    font-size: 9.5px; font-weight: 600;
-    letter-spacing: .3em; text-indent: .3em;
-    color: var(--on-brand-dim);
+  .claim em {
+    font-family: Fraunces, serif;
+    font-style: italic;
+    font-weight: 500;
   }
 
-  .rail-track {
-    position: relative; height: 9px;
-    display: flex; align-items: center; justify-content: space-between;
+  .sub {
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--muted);
+    text-wrap: balance;
   }
 
-  .rail-track::before {
-    content: ""; position: absolute; inset-inline: 3px; height: 1px;
-    background: var(--on-brand-dim); opacity: .5;
-    transform: scaleX(0); transform-origin: left center;
-    animation: draw .85s cubic-bezier(.22,1,.36,1) .15s forwards;
+  /* -------------------------------------------------------------- 버튼
+     형태로 우선순위를 나눈다 — 꽉 찬 면 → 연한 면 → 흰 면. */
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1vh, 9px);
   }
 
-  .rail-track b {
-    position: relative; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--on-brand-dim); opacity: 0;
-    animation: pop .4s cubic-bezier(.22,1,.36,1) forwards;
-  }
-  .rail-track b:first-child, .rail-track b:last-child {
-    width: 9px; height: 9px; background: var(--on-brand);
-    box-shadow: 0 0 0 4px rgba(255,247,247,.16);
-  }
-  .rail-track b:nth-child(1) { animation-delay: .20s; }
-  .rail-track b:nth-child(2) { animation-delay: .38s; }
-  .rail-track b:nth-child(3) { animation-delay: .52s; }
-  .rail-track b:nth-child(4) { animation-delay: .66s; }
-  .rail-track b:nth-child(5) { animation-delay: .84s; }
-
-  .rail-ends { display: flex; justify-content: space-between; font-size: 12px; font-weight: 500; }
-  .rail-ends span:first-child { font-family: Fraunces, serif; font-weight: 600; }
-
-  @keyframes draw { to { transform: scaleX(1); } }
-  @keyframes pop  { to { opacity: 1; } }
-
-  /* ------------------------------------------------------------- 행동
-     형태로 우선순위를 나눈다. 똑같은 알약 여섯 개를 쌓지 않는다. */
-  .actions { padding-inline: 20px; display: flex; flex-direction: column; gap: 10px; }
-
-  .cta {
-    display: flex; align-items: center; gap: 12px;
-    min-height: 60px; padding: 14px 18px;
-    border-radius: var(--radius); text-decoration: none;
-    font-size: 16px; font-weight: 600; letter-spacing: -.012em;
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    /* 46px 아래로는 내려가지 않는다 — 손가락으로 누를 수 있어야 한다 */
+    min-height: clamp(46px, 6.2vh, 54px);
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 15.5px;
+    font-weight: 600;
+    letter-spacing: -.015em;
     transition: transform .12s ease, background-color .18s ease, border-color .18s ease;
   }
-  .cta svg { flex: none; }
-  .cta strong { flex: 1; font-weight: inherit; }
-  .cta:active { transform: translateY(1px); }
 
-  .cta-primary { background: var(--cta-bg); color: var(--cta-fg); box-shadow: var(--shadow); }
-  .cta-primary:hover { background: var(--cta-bg-press); }
+  nav a span { flex: 1; }
+  nav a svg { flex: none; }
+  nav a:active { transform: translateY(1px); }
 
-  .cta-secondary {
-    background: var(--brand-tint); color: var(--brand-ink);
-    border: 1px solid var(--brand-line);
+  .primary {
+    background: var(--cta-bg);
+    color: var(--cta-fg);
+    box-shadow: 0 8px 20px -10px rgba(219,1,6,.75);
   }
-  .cta-secondary:hover { border-color: var(--brand-ink); }
+  .primary:hover { background: var(--cta-bg-press); }
 
-  /* 보조 링크 — 알약 대신 실선으로 나눈 목록 */
-  .links {
-    margin-inline: 20px; background: var(--surface);
-    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  .secondary {
+    background: var(--tint);
+    color: var(--brand-ink);
+    border: 1px solid var(--tint-line);
   }
-  .links a {
-    display: flex; align-items: center; gap: 13px;
-    min-height: 56px; padding: 12px 16px;
-    color: var(--ink); text-decoration: none;
-    font-size: 15px; font-weight: 500; letter-spacing: -.012em;
-    border-top: 1px solid var(--line);
-    transition: background-color .15s ease;
+  .secondary:hover { border-color: var(--brand-ink); }
+
+  .plain {
+    background: var(--card);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-row);
   }
-  .links a:first-child { border-top: 0; }
-  .links a:hover { background: var(--brand-tint); }
-  .links a span { flex: 1; }
-  .links a svg { flex: none; color: var(--brand-ink); }
-  .links a .chev { color: var(--muted); }
+  .plain:hover { background: var(--tint); border-color: var(--tint-line); }
+  .plain svg:first-child { color: var(--brand-ink); }
+  .chev { color: var(--muted); }
+  .primary .chev { color: rgba(255,247,247,.75); }
+  .secondary .chev { color: var(--brand-ink); opacity: .7; }
 
   /* --------------------------------------------------------------- 꼬리 */
   footer {
-    padding-inline: 20px;
-    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
     text-align: center;
   }
 
-  .latin {
-    margin: 0; font-family: Fraunces, serif;
-    font-size: 13px; font-weight: 500; color: var(--muted);
-  }
-
   .social { display: flex; gap: 8px; }
+
   .social a {
-    padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px;
-    background: var(--surface); color: var(--ink-2);
-    text-decoration: none; font-size: 13px; font-weight: 500;
-    transition: border-color .15s ease, color .15s ease;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: var(--tint);
+    color: var(--brand-ink);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color .15s ease;
   }
-  .social a:hover { border-color: var(--brand-ink); color: var(--brand-ink); }
+  .social a:hover { background: var(--tint-line); }
 
   .legal {
-    margin: 0; font-size: 11.5px; font-weight: 300;
-    color: var(--muted); font-variant-numeric: tabular-nums;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
   }
 
-  a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 3px; border-radius: 8px; }
-  .mast a:focus-visible { outline-color: var(--on-brand); }
+  a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 3px; }
 
   @media (prefers-reduced-motion: reduce) {
-    .rail-track::before { transform: scaleX(1); animation: none; }
-    .rail-track b { opacity: 1; animation: none; }
     * { transition-duration: .01ms !important; }
+  }
+
+  /* 아주 낮은 화면에서는 글자까지 한 단계 줄인다 */
+  @media (max-height: 700px) {
+    h1 { font-size: 19px; }
+    .claim { font-size: 13.5px; }
+    .sub { font-size: 12px; }
+    nav a { font-size: 15px; }
   }
 </style>
 </head>
@@ -304,59 +253,41 @@
        신입생 상담 신청  → 네이버폼 · 구글폼 주소
        카카오톡 상담     → http://pf.kakao.com/_○○○○○
        교육과정 / 수업   → 블로그 글 주소
-       위치 · 주차       → 네이버 지도 주소  (지금은 이름으로 검색되게 해 두었습니다)
        전화              → tel:055-000-0000
-       인스타 · 블로그    → 각 계정 주소
        등록번호          → 맨 아래 «제0000호»
      ===================================================================== -->
 
-<main class="page">
+<main class="card">
   <header class="mast">
-    <img class="mark" src="assets/logo.png" alt="" width="62" height="62">
-
-    <div class="wordmark">
-      <b>Beyond</b>
-      <i>ENGLISH</i>
-      <div class="campus">사송캠퍼스</div>
-    </div>
-
-    <div class="tagline">
-      <p class="claim">결과가 다른 영어 · <em>Learn Beyond.</em></p>
-      <p class="sub">Phonics부터 수능까지 이어지는 영어 성장 로드맵</p>
-    </div>
-
-    <div class="rail">
-      <div class="rail-label">영어 성장 로드맵</div>
-      <div class="rail-track" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
-      <div class="rail-ends"><span>Phonics</span><span>수능</span></div>
-    </div>
+    <img class="mark" src="assets/logo.png" alt="" width="72" height="72">
+    <h1>비욘드 잉글리쉬 사송캠퍼스</h1>
+    <p class="claim">결과가 다른 영어 · <em>Learn Beyond.</em></p>
+    <p class="sub">Phonics부터 수능까지 이어지는 영어 성장 로드맵</p>
   </header>
 
-  <section class="actions">
+  <nav aria-label="상담 및 학원 안내">
     <!-- 상담 신청 폼 주소를 넣으세요 -->
-    <a class="cta cta-primary" href="#">
+    <a class="primary" href="#">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/>
         <path d="M16 5h2a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2"/>
         <path d="M9 13h6M9 16.5h4"/>
       </svg>
-      <strong>신입생 상담 신청하기</strong>
+      <span>신입생 상담 신청하기</span>
       <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
     </a>
 
     <!-- 카카오톡 채널 주소를 넣으세요 -->
-    <a class="cta cta-secondary" href="#">
+    <a class="secondary" href="#">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M20 11.5c0 3.6-3.6 6.5-8 6.5-.9 0-1.8-.1-2.6-.35L5 19.5l1.1-3A6.2 6.2 0 0 1 4 11.5C4 7.9 7.6 5 12 5s8 2.9 8 6.5Z"/>
       </svg>
-      <strong>카카오톡으로 빠른 상담</strong>
+      <span>카카오톡으로 빠른 상담</span>
       <svg class="chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
     </a>
-  </section>
 
-  <nav class="links" aria-label="학원 안내">
     <!-- 교육과정을 소개한 블로그 글 주소 -->
-    <a href="#">
+    <a class="plain" href="#">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="m12 4 9 4.5-9 4.5-9-4.5L12 4Z"/><path d="M6.5 10.5V15c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5v-4.5"/><path d="M21 8.5V14"/>
       </svg>
@@ -365,7 +296,7 @@
     </a>
 
     <!-- 수업 후기·소식 블로그 주소 -->
-    <a href="#">
+    <a class="plain" href="#">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M12 6.5C10.5 5.2 8.5 4.7 4.5 5v13c4-.3 6 .2 7.5 1.5 1.5-1.3 3.5-1.8 7.5-1.5V5c-4-.3-6 .2-7.5 1.5Z"/><path d="M12 6.5v13"/>
       </svg>
@@ -375,7 +306,7 @@
 
     <!-- 지금은 학원 이름으로 네이버 지도를 검색합니다.
          정확한 장소 페이지 주소를 받으면 그것으로 바꾸는 편이 낫습니다. -->
-    <a href="https://map.naver.com/p/search/비욘드잉글리쉬%20사송" target="_blank" rel="noopener">
+    <a class="plain" href="https://map.naver.com/p/search/비욘드잉글리쉬%20사송" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M12 21s7-5.2 7-10.4A7 7 0 0 0 5 10.6C5 15.8 12 21 12 21Z"/><circle cx="12" cy="10.4" r="2.5"/>
       </svg>
@@ -384,7 +315,7 @@
     </a>
 
     <!-- tel:055-000-0000 형식으로 넣으면 눌렀을 때 바로 전화가 걸립니다 -->
-    <a href="#">
+    <a class="plain" href="#">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"/>
       </svg>
@@ -394,19 +325,12 @@
   </nav>
 
   <footer>
-    <p class="latin">Beyond English Sasong Campus</p>
-
     <div class="social">
-      <a href="https://www.instagram.com/beyondenglish_sasong/" target="_blank" rel="noopener">
-        인스타그램
-      </a>
-      <a href="https://blog.naver.com/beyondenglish_sasong" target="_blank" rel="noopener">
-        네이버 블로그
-      </a>
+      <a href="https://www.instagram.com/beyondenglish_sasong/" target="_blank" rel="noopener">인스타그램</a>
+      <a href="https://m.blog.naver.com/beyondenglish_sasong?tab=1" target="_blank" rel="noopener">네이버 블로그</a>
     </div>
 
-    <!-- 학원 광고에는 등록번호가 들어가야 합니다. 실제 번호로 바꾸세요. -->
-    <p class="legal">양산교육지원청 등록 제0000호 · 경남 양산시</p>
+    <p class="legal">양산교육지원청 등록 제2285호 · 경남 양산시</p>
   </footer>
 </main>
 
