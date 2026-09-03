@@ -5,39 +5,55 @@
 <title>og source</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap">
 <style>
   /* 카카오톡·인스타그램 링크 미리보기용 1200×630 원본.
-     이 파일은 assets/og.png 를 뽑기 위한 것이며 사이트에서 쓰이지 않는다. */
+     이 파일은 assets/og.png 를 뽑기 위한 것이며 사이트에서 쓰이지 않는다.
+
+     사이트와 같은 얼굴이어야 한다 — 연분홍 바탕에 흰 카드, 실제 워드마크. */
   * { box-sizing: border-box; margin: 0; }
+
   body {
     width: 1200px; height: 630px; overflow: hidden;
-    display: flex; align-items: center; gap: 64px;
-    padding: 0 96px;
-    background:
-      radial-gradient(90% 120% at 88% -10%, rgba(255,90,95,.55) 0%, transparent 58%),
-      linear-gradient(158deg, #DB0106 0%, #7C0510 100%);
-    color: #FFF7F7;
+    display: flex; align-items: center; justify-content: center;
+    background: #FDF2F3;
     font-family: "IBM Plex Sans KR", sans-serif;
+    color: #1A1213;
   }
-  img { width: 208px; height: 208px; border-radius: 54px; background: #FFF7F7; padding: 12px; flex: none; }
-  .copy { display: flex; flex-direction: column; gap: 18px; }
-  .word { font-family: Fraunces, serif; font-weight: 600; font-size: 88px; line-height: .92; letter-spacing: -.02em; }
-  .eng { font-size: 20px; font-weight: 500; letter-spacing: .44em; color: #F4BFC0; }
-  .campus { font-family: "Gowun Batang", serif; font-weight: 700; font-size: 42px; margin-top: 6px; }
-  .claim { font-family: "Gowun Batang", serif; font-weight: 700; font-size: 27px; margin-top: 14px; }
+
+  .card {
+    width: 1010px; height: 470px;
+    background: #FFFFFF;
+    border-radius: 44px;
+    box-shadow: 0 2px 4px rgba(26,18,19,.04), 0 40px 90px -50px rgba(219,1,6,.35);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  img { width: 560px; height: auto; display: block; }
+
+  .campus {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700; font-size: 48px;
+    letter-spacing: -.02em;
+    margin-top: 6px;
+  }
+
+  .claim {
+    font-size: 27px; font-weight: 600;
+    color: #C00105; letter-spacing: -.01em;
+  }
   .claim em { font-family: Fraunces, serif; font-style: italic; font-weight: 500; }
-  .sub { font-size: 20px; font-weight: 300; color: #F4BFC0; }
+
+  .sub { font-size: 21px; font-weight: 300; color: #8A7476; }
 </style>
 </head>
 <body>
-  <img src="../assets/logo.png" alt="">
-  <div class="copy">
-    <div>
-      <div class="word">Beyond</div>
-      <div class="eng">ENGLISH</div>
-      <div class="campus">사송캠퍼스</div>
-    </div>
+  <div class="card">
+    <img src="../assets/wordmark.png" alt="">
+    <div class="campus">사송캠퍼스</div>
     <div>
       <div class="claim">결과가 다른 영어 · <em>Learn Beyond.</em></div>
       <div class="sub">Phonics부터 수능까지 이어지는 영어 성장 로드맵</div>

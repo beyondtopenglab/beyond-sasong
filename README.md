@@ -13,7 +13,7 @@
 ```
 index.html          페이지 전부 (HTML 한 장)
 assets/
-  logo.png          BE 마크
+  wordmark.png      가로형 로고 (BE 책 + BEYOND ENGLISH) — 상단에 쓴다
   og.png            카카오톡·인스타에 링크를 붙였을 때 보이는 미리보기 그림
   favicon.png       브라우저 탭 아이콘
   apple-touch-icon.png

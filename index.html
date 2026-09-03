@@ -104,14 +104,13 @@
     gap: 6px;
   }
 
-  /* 로고 파일 자체가 빨간 면이라 원형으로 자르면 그대로 빨간 원이 된다 */
-  .mark {
-    width: clamp(68px, 9.4vh, 84px);
-    height: clamp(68px, 9.4vh, 84px);
-    border-radius: 50%;
+  /* 실제 워드마크(BE 책 + BEYOND ENGLISH). 투명 PNG 라 흰 카드에 그대로 얹는다.
+     8.3:1 로 아주 납작해서 폭을 기준으로 잡고 높이는 따라오게 둔다. */
+  .wordmark {
     display: block;
-    margin-bottom: clamp(7px, 1.2vh, 11px);
-    box-shadow: 0 6px 18px -6px rgba(219,1,6,.5);
+    width: min(100%, clamp(208px, 30vh, 268px));
+    height: auto;
+    margin: 0 auto clamp(9px, 1.5vh, 14px);
   }
 
   h1 {
@@ -216,14 +215,6 @@
     text-align: center;
   }
 
-  .latin {
-    margin: 0;
-    font-family: Fraunces, serif;
-    font-style: italic;
-    font-size: 13px;
-    color: var(--muted);
-  }
-
   .social { display: flex; gap: 8px; }
 
   .social a {
@@ -275,8 +266,11 @@
 
 <main class="card">
   <header class="mast">
-    <img class="mark" src="assets/logo.png" alt="" width="72" height="72">
-    <h1>비욘드 잉글리쉬 사송캠퍼스</h1>
+    <h1>
+      <img class="wordmark" src="assets/wordmark.png" alt="비욘드 잉글리쉬"
+           width="4364" height="527">
+      <span>사송캠퍼스</span>
+    </h1>
     <p class="claim">결과가 다른 영어 · <em>Learn Beyond.</em></p>
     <p class="sub">Phonics부터 수능까지 이어지는 영어 성장 로드맵</p>
   </header>
@@ -333,8 +327,6 @@
   </nav>
 
   <footer>
-    <p class="latin">Beyond English Sasong Campus</p>
-
     <div class="social">
       <a href="https://www.instagram.com/beyondenglish_sasong/" target="_blank" rel="noopener">인스타그램</a>
       <a href="https://m.blog.naver.com/beyondenglish_sasong?tab=1" target="_blank" rel="noopener">네이버 블로그</a>
