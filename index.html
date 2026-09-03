@@ -89,10 +89,10 @@
     border-radius: 26px;
     box-shadow: var(--shadow-card);
     /* 화면이 낮을수록 알아서 조여진다 — 휴대폰 한 화면에 다 들어와야 하므로 */
-    padding: clamp(18px, 3vh, 26px) 18px calc(clamp(16px, 2.4vh, 22px) + env(safe-area-inset-bottom));
+    padding: clamp(24px, 3.6vh, 32px) 18px calc(clamp(20px, 3vh, 26px) + env(safe-area-inset-bottom));
     display: flex;
     flex-direction: column;
-    gap: clamp(13px, 2.2vh, 20px);
+    gap: clamp(18px, 2.8vh, 24px);
   }
 
   /* --------------------------------------------------------------- 머리 */
@@ -101,23 +101,23 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 6px;
   }
 
   /* 로고 파일 자체가 빨간 면이라 원형으로 자르면 그대로 빨간 원이 된다 */
   .mark {
-    width: clamp(56px, 8vh, 72px);
-    height: clamp(56px, 8vh, 72px);
+    width: clamp(68px, 9.4vh, 84px);
+    height: clamp(68px, 9.4vh, 84px);
     border-radius: 50%;
     display: block;
-    margin-bottom: clamp(4px, .8vh, 9px);
+    margin-bottom: clamp(7px, 1.2vh, 11px);
     box-shadow: 0 6px 18px -6px rgba(219,1,6,.5);
   }
 
   h1 {
     margin: 0;
     font-family: "Gowun Batang", serif;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: -.02em;
     text-wrap: balance;
@@ -149,7 +149,7 @@
   nav {
     display: flex;
     flex-direction: column;
-    gap: clamp(6px, 1vh, 9px);
+    gap: clamp(9px, 1.5vh, 13px);
   }
 
   nav a {
@@ -157,9 +157,9 @@
     align-items: center;
     gap: 11px;
     /* 46px 아래로는 내려가지 않는다 — 손가락으로 누를 수 있어야 한다 */
-    min-height: clamp(46px, 6.2vh, 54px);
-    padding: 10px 15px;
-    border-radius: 15px;
+    min-height: clamp(52px, 7.4vh, 64px);
+    padding: 12px 16px;
+    border-radius: 16px;
     text-decoration: none;
     font-size: 15.5px;
     font-weight: 600;
@@ -202,8 +202,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
+    gap: 11px;
     text-align: center;
+  }
+
+  .latin {
+    margin: 0;
+    font-family: Fraunces, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
   }
 
   .social { display: flex; gap: 8px; }
@@ -313,6 +321,8 @@
   </nav>
 
   <footer>
+    <p class="latin">Beyond English Sasong Campus</p>
+
     <div class="social">
       <a href="https://www.instagram.com/beyondenglish_sasong/" target="_blank" rel="noopener">인스타그램</a>
       <a href="https://m.blog.naver.com/beyondenglish_sasong?tab=1" target="_blank" rel="noopener">네이버 블로그</a>
