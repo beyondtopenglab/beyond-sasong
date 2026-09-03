@@ -72,7 +72,8 @@ GitHub 웹 화면에서 바로 고칠 수 있습니다.
 ### 처음 한 번
 
 1. https://dash.cloudflare.com 에서 학원 계정으로 가입 (무료, 카드 불필요)
-2. **Workers & Pages → Create → Pages → Connect to Git**
+2. **Workers & Pages → Create application → Pages 탭 → Connect to Git**
+   (기본이 Workers 탭이라 Pages 로 옮겨야 한다)
 3. 이 저장소를 고른다
 4. 빌드 설정 — **아무것도 넣지 않는다**
    - Framework preset: `None`
@@ -80,21 +81,22 @@ GitHub 웹 화면에서 바로 고칠 수 있습니다.
    - Build output directory: `/`
 5. **Save and Deploy**
 
-`https://<프로젝트이름>.pages.dev` 주소가 나옵니다.
+배포 주소는 **https://beyond-sasong.pages.dev** 입니다.
 
-### 배포 직후 한 번 — 미리보기 주소 채우기
+### 주소가 바뀌면 두 줄을 함께 고친다
 
-`index.html` 위쪽에 `https://REPLACE-ME/assets/og.png` 로 비워 둔 곳이 있습니다.
-방금 받은 실제 주소로 바꿔야 카카오톡에 링크를 붙였을 때 미리보기 카드가 뜹니다.
-**카카오톡은 상대 경로를 읽지 못하고 전체 주소를 요구합니다.**
+도메인을 붙이는 등 주소가 바뀌면 `index.html` 위쪽의 이 두 줄도 같이 바꿔야
+카카오톡 미리보기 카드가 계속 뜹니다. **카카오톡은 상대 경로를 읽지 못하고
+전체 주소를 요구합니다.**
 
-```
+```html
+<meta property="og:url" content="https://beyond-sasong.pages.dev/">
 <meta property="og:image" content="https://beyond-sasong.pages.dev/assets/og.png">
 ```
 
-바꾼 뒤 카카오톡에서 이미 한 번 링크를 보냈다면
+이미 카카오톡으로 링크를 보낸 적이 있다면
 [카카오 디버거](https://developers.kakao.com/tool/clear/og)에서 캐시를 지워야
-새 이미지가 보입니다.
+새 이미지가 보입니다. 카카오는 한 번 읽은 미리보기를 한동안 쥐고 있습니다.
 
 ### 그다음부터
 
